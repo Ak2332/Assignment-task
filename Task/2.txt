@@ -1,0 +1,34 @@
+Question 2
+Find the maximum consecutive 1's in an array of 0's and 1's.
+Example:
+a) 00110001001110 - Output :3 [Max num of consecutive 1's is 3]
+b) 1000010001 - Output :1 [Max num of consecutive 1's is 1]
+
+
+
+<html>
+<head>
+<script type="text/javascript">
+	function consecutiveNumber()
+	{
+		var array=[0,0,1,1,0,0,0,1,0,0,1,1,1,0];
+		var consecutive = 0;
+		var count=0;
+		for(var i = 0; i < array.length; i++){
+			if(array[i] == 0)
+				count = 0;
+			else
+				count++;
+			consecutive = count > consecutive ? count : consecutive;
+			}
+			document.writeln("consecutive 1's number is - : ", + consecutive);
+	}
+</script>
+</head>
+<body>
+	<h2> Find consecutive 1's number</h2>
+	<button onclick="consecutiveNumber()">consecutive</button>
+</body>
+</html>
+
+

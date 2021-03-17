@@ -1,0 +1,24 @@
+Question 4
+Let’s see we an api url www.example.com/api/get/1 
+Write a sample code to call this rest api and display the result.
+
+
+
+  <head>
+    <title>XML http request</title>
+    <script>
+       function getUsers() {
+        let response = await fetch(
+          "http://www.example.com/api/get/1"
+        );
+        let data = await response.json();
+        return data;
+      }
+      getUsers().then(data => console.log(data));
+    </script>
+  </head>
+
+  <body>
+    <button onclick="getUsers()">clickMe</button>
+  </body>
+</html>
